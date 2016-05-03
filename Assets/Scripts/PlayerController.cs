@@ -51,13 +51,13 @@ public class PlayerController : MonoBehaviour
 			
 			if (thrust > 0f) {
 				
-				renderer.enabled = false;
-				rigidbody.AddRelativeForce (Vector3.forward * thrust * Time.deltaTime);
+				GetComponent<Renderer>().enabled = false;
+				GetComponent<Rigidbody>().AddRelativeForce (Vector3.forward * thrust * Time.deltaTime);
 				
 				
 			}
 			
-			rigidbody.AddRelativeTorque (Vector3.up * turn * Time.deltaTime);
+			GetComponent<Rigidbody>().AddRelativeTorque (Vector3.up * turn * Time.deltaTime);
 	
 			if (Input.GetKeyDown ("space") && time > ShotDelay) {
 				//Fire bullet
@@ -65,8 +65,8 @@ public class PlayerController : MonoBehaviour
 				time = 0;
 			}
 	transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 360); 
-	rigidbody.angularVelocity = new Vector3(0, rigidbody.angularVelocity.y, 0); 
-	speed = rigidbody.velocity;
+	GetComponent<Rigidbody>().angularVelocity = new Vector3(0, GetComponent<Rigidbody>().angularVelocity.y, 0); 
+	speed = GetComponent<Rigidbody>().velocity;
 	if(speed.x > maxSpeed)
 		speed.x = maxSpeed;
 	if(speed.z > maxSpeed)
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 		speed.z = -maxSpeed;
 		
 	speed.y = 0;
-	rigidbody.velocity = speed;
+	GetComponent<Rigidbody>().velocity = speed;
 		
 			//transform.Translate(new Vector3(transform.position.x, 0 , transform.position.z));
 		}

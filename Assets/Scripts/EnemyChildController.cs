@@ -23,9 +23,9 @@ public class EnemyChildController : MonoBehaviour {
 
 		}
 
-		rigidbody.velocity = new Vector3(x , 0, z);
+		GetComponent<Rigidbody>().velocity = new Vector3(x , 0, z);
 	//	rigidbody.AddTorque(new Vector3( Random.Range(-10, 10), 5, Random.Range(-10, 10)));
-		rigidbody.angularVelocity = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10)); 
+		GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10)); 
 
 	}
 	

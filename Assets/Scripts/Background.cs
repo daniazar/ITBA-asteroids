@@ -10,13 +10,13 @@ public class Background : MonoBehaviour {
 	void Start () {
 		
 	player = GameObject.Find("player");
-	body = player.rigidbody;	
+	body = player.GetComponent<Rigidbody>();	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-	renderer.material.mainTextureOffset += new Vector2( -body.velocity.x * speed, - body.velocity.z * speed);
+	GetComponent<Renderer>().material.mainTextureOffset += new Vector2( -body.velocity.x * speed, - body.velocity.z * speed);
    
 	}
 }
