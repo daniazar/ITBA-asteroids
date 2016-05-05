@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 	public GUISkin skin;
@@ -17,11 +18,11 @@ public class MainMenu : MonoBehaviour {
 	        GUI.Label (new Rect (groupWidth/2 + 60, Screen.height/4 , groupWidth, groupHeight), "Asteroid Deluxe", skin.GetStyle("LoseSkin"));
            	if(GUI.Button(new Rect(Screen.width / 2 - buttonWidth / 2, Screen.height / 2 - buttonHeight / 2 , buttonWidth, buttonHeight), "Start Normal Game "))
 			{
-				Application.LoadLevel(1);
+			SceneManager.LoadScene("playScene");
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - buttonWidth / 2, Screen.height / 2 - buttonHeight / 2  + 2 * buttonHeight, buttonWidth, buttonHeight), "Start 2.5D Game"))
 			{
-			Application.LoadLevel(4);
+			SceneManager.LoadScene("SceneName");
 			}
     	
 	}	

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour {
 	public int MaxEnemys = 5;
@@ -49,7 +50,7 @@ public class EnemyManager : MonoBehaviour {
 		Destroy(enemy);
 		
 		if(	PlayerController.score > maximumScore)
-			Application.LoadLevel(3);
+			SceneManager.LoadScene("Win");
 	}
 	
 	

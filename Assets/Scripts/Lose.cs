@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Lose : MonoBehaviour {
 
@@ -20,7 +21,7 @@ public class Lose : MonoBehaviour {
 			PlayerController.lives = 3;
 			PlayerController.score = 0;
 			EnemyManager.enemyCount = 0;
-			Application.LoadLevel(0);
+			SceneManager.LoadScene("playScene");
 		}
 	}
 		

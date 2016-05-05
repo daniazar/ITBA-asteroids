@@ -8,8 +8,11 @@ public class PauseScript : MonoBehaviour {
 	//public MonoBehaviour scriptLookX;
 	
 	protected bool paused;
-	private float oldScale = Time.timeScale;
-	
+	private float oldScale;
+
+	void Initialize () {
+		oldScale = Time.timeScale;
+	}
 	void OnPauseGame ()
 	{
         paused = true;

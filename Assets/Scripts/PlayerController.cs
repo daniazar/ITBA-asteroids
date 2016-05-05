@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -132,7 +133,7 @@ public class PlayerController : MonoBehaviour
 			}
 			state = State.Playing;
 		} else {
-			Application.LoadLevel (2);
+			SceneManager.LoadScene("Lose");
 		}
 	}
 
