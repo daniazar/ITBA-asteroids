@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour {
 			}
 			if(GUI.Button(new Rect(Screen.width / 2 - buttonWidth / 2, Screen.height / 2 - buttonHeight / 2  + 2 * buttonHeight, buttonWidth, buttonHeight), "Start 2.5D Game"))
 			{
-			SceneManager.LoadScene("SceneName");
+			SceneManager.LoadScene("2.5DGame");
 			}
     	
 	}	
